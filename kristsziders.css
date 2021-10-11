@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Home page*/
+
+.banner_main{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(banner4.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 35px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 25px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li a::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #d00000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 60px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d00000;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* History page*/
+
+.other_button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    top: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d00000;
+    background: transparent;
+    color: #fff;
+    cursor: pointer; 
+}
+.other_button a{
+    text-decoration: none;
+    color: #fff;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(fromtop.jpeg);
+    background-size: cover;
+    color: #fff;
+}
+
+.timeline{
+    width: 70%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+    list-style: none;
+}
+
+.timeline ul li{
+    padding: 20px;
+    background-color: #c3c4c2; 
+    color: #000;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px; /*depends if I want the space at the beggining or not*/
+    border: 2px solid #d00000;
+}
+/* so last square does not have space under
+.timeline ul li:last-child{
+    margin-bottom: 0;
+}
+*/
+
+.timeline-content h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p{
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+@media only screen and (min-width: 768px){
+    .timeline::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        left: 50%; /* so it is in the center*/
+        transform: translateX(-50%);/* now it is perfectly in the center*/
+        background-color: #d00000;
+    }
+    .timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+    }
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+    }
+    .timeline ul li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: #d00000;
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        transform: translateX(70%, -70%);
+        right: 30px;
+    }
+    .timeline ul li:nth-child(even)::after{
+        transform: translateX(70%, -70%);
+        right: 390px;
+    }
+}
+
+/* Profile page */
+
+.bg{
+    height: 100%;
+    width: 100%;
+    background-color: #d00000;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 9% 100%, 0 100%, 0% 50%);
+    position: absolute;
+    z-index: -1;
+}
+
+.countdown{
+    width: 800px;
+    height: 800px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+.countdown_container{
+   position: absolute;
+   top: 100%;
+   left: 80%;
+   transform: translateX(-50%) translateY(-50%);
+   text-align: center;
+   background: #fff;
+   border: 7px solid #d00000;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0 0 5px 3px #000;
+
+}
+
+.about{
+    width: 70%;
+    padding: 20px;
+    border: 7px solid #d00000;
+    box-shadow: 3px solid #000;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: justify;
+    display: flex;
+    margin: 15px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    font-family: sans-serif;
+}
+
+/*.image_grid{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid_image {
+    display: block;
+}*/
+
+/* Follow Me page */
+
+.banner_follow{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(closeup.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact Me page */
+.container_two{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(photo.jpeg);
+    background-size: cover;
+    color: #fff;
+}
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contact_content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contact_content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact .contact_content p{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.address{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.address .contact_info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.address .contact_info .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.address .contact_info .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.address .contact_info .box .text h3{
+    font-weight: 500;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #000;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #d00000;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #c3c4c2;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #d00000;
+    font-size: 14px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #d00000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.footer{
+    background: #000;
+    color: #fff;
+}
